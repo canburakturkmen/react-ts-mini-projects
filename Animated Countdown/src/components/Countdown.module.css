@@ -1,0 +1,96 @@
+.counter {
+  text-align: center;
+  transition: transform 0.2s ease-out;
+}
+
+.counter.hide {
+  transition-delay: 0.6s;
+  transform: scale(0);
+}
+
+.final {
+  position: absolute;
+  transform: scale(0);
+  transition: all 0.2s ease-out;
+}
+
+.final.show {
+  transform: scale(1);
+  transition-delay: 0.6s;
+}
+
+.nums {
+  color: #3498db;
+  font-size: 5rem;
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 75px;
+}
+
+h4 {
+  margin-top: 40px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.nums span {
+  position: absolute;
+  margin-bottom: 100px;
+  left: 50%;
+  top: 50%;
+  transform-origin: bottom center;
+}
+
+.stop {
+  animation: stopNumber 0.6s ease-in-out forwards;
+}
+
+.num {
+  transform: translate(-50%, -50%) rotate(120deg);
+  animation: animateNumber 1s ease-in-out infinite;
+}
+
+.final h1{
+  text-align: center;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.final button{
+  background-color: steelblue;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+@keyframes stopNumber {
+  0% {
+    transform: translate(-50%, -50%) rotate(120deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-10deg);
+  }
+  80% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes animateNumber {
+  0% {
+    transform: translate(-50%, -50%) rotate(120deg);
+  }
+  30% {
+    transform: translate(-50%, -50%) rotate(-10deg);
+  }
+  48% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-120deg);
+  }
+}
